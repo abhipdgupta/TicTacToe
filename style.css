@@ -1,0 +1,74 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+.ttt_board {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  background-color: rgb(70, 135, 113);
+  max-width: 540px;
+  max-height: 540px;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 15px;
+}
+.block {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cadetblue;
+  transform: scale(0.9);
+  cursor: pointer;
+}
+.block:hover{
+    background-color:rgb(75, 130, 132) ;
+}
+.block p {
+  font-size: 6rem;
+  color: wheat;
+  padding: 0;
+  margin: 0;
+}
+.line {
+  
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  height: 5px;
+  background-color: black;
+  z-index: 10;
+  top: 50%;
+  transition: width .3s  ease-in-out ;
+  
+  
+}
+.line_animate{
+     width: 90%;
+     
+}
+#reset{
+    cursor: pointer;
+    border-radius:15px;
+    
+}
+.title,#reset,#result{
+    user-select: none;
+}
+
+@media only screen and (max-width: 440px) {
+    .block p {
+        font-size: 4rem;
+        
+      }
+  }
